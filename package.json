@@ -1,14 +1,25 @@
 {
   "name": "headerview",
+  "publisher": "ASionville",
   "displayName": "HeaderView",
   "description": "An extension that never loses its head",
-  "version": "1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.79.0"
   },
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "header",
+    "view",
+    "c",
+    "cpp",
+    "c++",
+    "h",
+    "hpp",
+    "hxx",
+    "h++"],
   "activationEvents": ["onLanguage:c", "onLanguage:cpp"],
   "main": "./out/extension.js",
   "contributes": {
@@ -30,6 +41,16 @@
       }
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ASionville/Headerview"},
+  "bugs": {
+    "url": "https://github.com/ASionville/Headerview/issues",
+    "email": "mail@asionville.fr"
+  },
+  "homepage": "https://github.com/ASionville/Headerview",
+  "icon": "icon.png",
+  "license": "See LICENSE.md",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
