@@ -2,7 +2,7 @@
   "name": "headerview",
   "displayName": "HeaderView",
   "description": "An extension that never loses its head",
-  "version": "0.0.1",
+  "version": "1",
   "engines": {
     "vscode": "^1.79.0"
   },

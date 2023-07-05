@@ -1,9 +1,11 @@
 # Change Log
 
-All notable changes to the "headerview" extension will be documented in this file.
+All notable changes to the HeaderView extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [1.0.0] - 2020-04-26
 
-## [Unreleased]
+### Added
 
-- Initial release
+- Initial release of HeaderView
+- Added the ability to move header files to the right side of the screen automatically
+- Added a setting to enable/disable the automatic move of existing header files
