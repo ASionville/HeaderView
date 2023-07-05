@@ -14,14 +14,21 @@
   "contributes": {
     "commands": [
       {
-        "command": "headerview.helloWorld",
-        "title": "Hello World"
-      },
-      {
         "command": "headerview.headerview",
         "title": "Activate Header View"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Headerview",
+      "properties": {
+        "headerview.moveExistingHeaderFiles": {
+          "title": "Move existing header files to the right side",
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to move existing .h files to the right side."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

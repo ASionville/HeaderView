@@ -23,6 +23,8 @@ export function activate(context: vscode.ExtensionContext) {
 		let fileName = activeEditor.document.fileName;
 		let fileExtension = fileName.split('.').pop();
 
+		const moveExistingHeaderFiles = vscode.workspace.getConfiguration('headerview').get('moveExistingHeaderFiles', true);
+
 		// if a .c file is active and it is not the main.c file, show the header file
 		if (fileExtension === 'c' && !fileName.includes('main.c')) {
 			// Remove the .c extension and add .h extension (not replace because there could be .c in the path)
@@ -38,8 +40,10 @@ export function activate(context: vscode.ExtensionContext) {
 			
 			// If the header file is already open, just move it to the right side of the editor
 			if (vscode.window.visibleTextEditors.some((editor) => editor.document.fileName === headerFileName)) {
-				vscode.window.showTextDocument(vscode.Uri.file(headerFileName), { viewColumn: vscode.ViewColumn.Beside, preserveFocus: true});
-				return;
+				if (moveExistingHeaderFiles) {
+					vscode.window.showTextDocument(vscode.Uri.file(headerFileName), { viewColumn: vscode.ViewColumn.Beside, preserveFocus: true});
+					return;
+				}
 			}else {
 			// Open the header file on the right side of the editor
 			vscode.window.showTextDocument(vscode.Uri.file(headerFileName), { viewColumn: vscode.ViewColumn.Beside, preserveFocus: true});
