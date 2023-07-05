@@ -50,7 +50,7 @@
   },
   "homepage": "https://github.com/ASionville/Headerview",
   "icon": "icon.png",
-  "license": "See LICENSE.md",
+  "license": "MIT",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
